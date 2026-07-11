@@ -22,9 +22,25 @@
 
 ## 👀 效果预览
 
-<p align="center">
-<img src="github-cover.png" width="600" alt="xhs-card-skill - 小红书图文卡片排版">
-</p>
+6 套主题各排同一篇内容（封面 + 内容页 + 结尾页三联）：
+
+<table>
+<tr>
+<td colspan="3" align="center"><img src="assets/theme-previews/tomato-journal.png" width="100%"><br><sub><b>番茄手帐（默认）</b></sub></td>
+</tr>
+<tr>
+<td width="33%" align="center"><img src="assets/theme-previews/mono-press.png" width="250"><br><sub><b>黑白报刊</b></sub></td>
+<td width="33%" align="center"><img src="assets/theme-previews/blueprint-notes.png" width="250"><br><sub><b>蓝图笔记</b></sub></td>
+<td width="33%" align="center"><img src="assets/theme-previews/sticky-collage.png" width="250"><br><sub><b>便利贴拼贴</b></sub></td>
+</tr>
+<tr>
+<td width="33%" align="center"><img src="assets/theme-previews/mint-lab.png" width="250"><br><sub><b>薄荷实验室</b></sub></td>
+<td width="33%" align="center"><img src="assets/theme-previews/neon-tape.png" width="250"><br><sub><b>霓虹磁带</b></sub></td>
+<td></td>
+</tr>
+</table>
+
+> 📚 浏览器打开 `assets/theme-previews/` 可看完整大图。
 
 ## ✨ 核心特性
 

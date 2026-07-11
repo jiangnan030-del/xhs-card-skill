@@ -27,3 +27,7 @@ docs/screenshots/
 # 允许 GitHub Social Preview 封面图
 !github-cover.png
 !github-cover.html
+
+# 允许主题预览图（assets/theme-previews/）
+!assets/theme-previews/*.png
+!assets/theme-previews/*.html
