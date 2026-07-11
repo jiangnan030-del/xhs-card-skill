@@ -20,27 +20,9 @@
 
 一个给 AI Agent（Claude Code / Codex / Cursor 等）用的小红书图文卡片排版 Skill。你写完 Markdown，它按你选的主题，生成 **3:4 比例的精美卡组 HTML**，再通过 Playwright 渲染成 PNG——自动切页、控制字数预算、落实安全区、打人设角标，并用三关校验脚本确定性兜住小红书平台的各种限制。
 
-## 👀 效果预览
-
-6 套主题，手机壳内真实效果：
-
-<table>
-<tr>
-<td colspan="3" align="center"><img src="assets/theme-previews/tomato-journal-phone.png" width="360"><br><sub><b>番茄手帐（默认）</b></sub></td>
-</tr>
-<tr>
-<td align="center"><img src="assets/theme-previews/mono-press-phone.png" width="280"><br><sub><b>黑白报刊</b></sub></td>
-<td align="center"><img src="assets/theme-previews/blueprint-notes-phone.png" width="280"><br><sub><b>蓝图笔记</b></sub></td>
-<td align="center"><img src="assets/theme-previews/sticky-collage-phone.png" width="280"><br><sub><b>便利贴拼贴</b></sub></td>
-</tr>
-<tr>
-<td align="center"><img src="assets/theme-previews/mint-lab-phone.png" width="280"><br><sub><b>薄荷实验室</b></sub></td>
-<td align="center"><img src="assets/theme-previews/neon-tape-phone.png" width="280"><br><sub><b>霓虹磁带</b></sub></td>
-<td></td>
-</tr>
-</table>
-
-> 📱 仿小红书 App 内效果 · 浏览器打开 `assets/theme-previews/` 可看完整大图。
+<p align="center">
+  <img src="github-cover.png" alt="xhs-card-skill cover">
+</p>
 
 ## ✨ 核心特性
 
