@@ -1,8 +1,29 @@
-out/
-.git-credentials
-node_modules/
-*.mjs
+# OS
+.DS_Store
+Thumbs.db
 
-# 允许封面图（GitHub Social Preview）
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# 本地临时产物（排版输出的 HTML 不入库，除 docs/gallery 示例外）
+/*.html
+*_排版_*.html
+
+# 预览图托管在 GitHub Release，不入库
+docs/screenshots/
+*.png
+
+# 允许 GitHub Social Preview 封面图
 !github-cover.png
 !github-cover.html

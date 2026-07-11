@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1242">
+<title>第4章 P1-P7阶段编排 - 小红书卡片</title>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- CARD 0: COVER - 封面 (CJK ≤40字) -->
+<!-- ============================================================ -->
+<div data-card="cover" style="width:1242px;height:1660px;box-sizing:border-box;padding:120px 100px;background-color:#FFFFFF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;display:flex;flex-direction:column;justify-content:center;">
+  <div style="display:inline-block;align-self:flex-start;background:#4C6EF5;color:#FFFFFF;font-size:40px;font-weight:700;padding:16px 44px;border-radius:12px;">PFC 工作流</div>
+  <div style="font-size:128px;line-height:1.2;font-weight:900;color:#212529;margin-top:56px;">七步搞定<span style="color:#4C6EF5;">离散元</span></div>
+  <div style="font-size:46px;color:#868E96;margin-top:44px;">让 PFC 调用有了工程节律</div>
+  <div style="margin-top:48px;display:flex;gap:20px;flex-wrap:wrap;">
+    <span style="background:#EDF2FF;color:#4C6EF5;font-size:32px;font-weight:600;padding:10px 24px;border-radius:8px;">七阶段路由</span>
+    <span style="background:#EDF2FF;color:#4C6EF5;font-size:32px;font-weight:600;padding:10px 24px;border-radius:8px;">决策表</span>
+    <span style="background:#EDF2FF;color:#4C6EF5;font-size:32px;font-weight:600;padding:10px 24px;border-radius:8px;">数据契约</span>
+  </div>
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARD 1: CONTENT-1 - 什么是 pfc-workflow -->
+<!-- ============================================================ -->
+<div data-card="content-1" style="width:1242px;height:1660px;box-sizing:border-box;padding:110px 100px;background-color:#FFFFFF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;">
+  <div style="display:flex;align-items:center;gap:32px;">
+    <span style="width:110px;height:110px;border-radius:50%;background:#4C6EF5;color:#FFFFFF;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;">1</span>
+    <span style="font-size:52px;font-weight:800;color:#212529;">什么是调度骨架？</span>
+  </div>
+  <div style="margin-top:48px;background:#EDF2FF;border:3px dashed #BAC8FF;border-radius:20px;padding:44px;font-size:42px;line-height:1.75;color:#212529;">
+    <span style="background:#DBE4FF;padding:4px 10px;font-weight:700;">pfc-workflow</span> 是方法论的<span style="font-weight:700;color:#4C6EF5;">调度骨架</span><br><br>
+    不实现 PFC 调用，而是把任务拆解为<span style="font-weight:700;">七个阶段</span>，路由到对应子 Skill。<br><br>
+    📌 P1-P7 是一面能照见<span style="background:#DBE4FF;padding:4px 10px;font-weight:700;">研究良心</span>的镜子。
+  </div>
+  <div style="margin-top:44px;font-size:40px;color:#4C6EF5;font-weight:700;">↓ 下一步：P1 问题定义</div>
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记 · 2/6</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARD 2: CONTENT-2 - P1 + P2 阶段 -->
+<!-- ============================================================ -->
+<div data-card="content-2" style="width:1242px;height:1660px;box-sizing:border-box;padding:110px 100px;background-color:#FFFFFF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;">
+  <div style="display:flex;align-items:center;gap:32px;">
+    <span style="width:110px;height:110px;border-radius:50%;background:#4C6EF5;color:#FFFFFF;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;">2</span>
+    <span style="font-size:52px;font-weight:800;color:#212529;">P1-P2：定义与几何</span>
+  </div>
+
+  <!-- P1 -->
+  <div style="margin-top:40px;display:flex;align-items:flex-start;gap:24px;">
+    <div style="min-width:80px;height:80px;border-radius:16px;background:#4C6EF5;color:#FFF;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P1</div>
+    <div style="flex:1;">
+      <div style="font-size:40px;font-weight:700;color:#212529;margin-bottom:12px;">问题定义 — 意向翻译为契约</div>
+      <div style="font-size:38px;line-height:1.7;color:#495057;background:#F8F9FA;padding:28px;border-radius:14px;">
+        输入自然语言 → 输出<span style="background:#DBE4FF;padding:4px 8px;font-weight:600;">task_spec.yaml</span><br>
+        💡 本质：<span style="font-weight:700;color:#4C6EF5;">把模糊意向变为可校验的契约</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div style="margin-top:32px;display:flex;align-items:flex-start;gap:24px;">
+    <div style="min-width:80px;height:80px;border-radius:16px;background:#4C6EF5;color:#FFF;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P2</div>
+    <div style="flex:1;">
+      <div style="font-size:40px;font-weight:700;color:#212529;margin-bottom:12px;">几何建模 — 为思想建造躯体</div>
+      <div style="font-size:38px;line-height:1.7;color:#495057;background:#F8F9FA;padding:28px;border-radius:14px;">
+        输出 .p3sav / .p2sav 初始模型<br>
+        ⚠️ 后续阶段都默认几何正确<br>
+        💡 本质：<span style="font-weight:700;color:#4C6EF5;">为思想建第一个可触摸躯体</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;font-size:40px;color:#4C6EF5;font-weight:700;">↓ 下一步：P3 物理与本构</div>
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记 · 3/6</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARD 3: CONTENT-3 - P3 + P4 阶段 -->
+<!-- ============================================================ -->
+<div data-card="content-3" style="width:1242px;height:1660px;box-sizing:border-box;padding:110px 100px;background-color:#FFFFFF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;">
+  <div style="display:flex;align-items:center;gap:32px;">
+    <span style="width:110px;height:110px;border-radius:50%;background:#4C6EF5;color:#FFFFFF;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;">3</span>
+    <span style="font-size:52px;font-weight:800;color:#212529;">P3-P4：物理与标定</span>
+  </div>
+
+  <!-- P3 -->
+  <div style="margin-top:40px;display:flex;align-items:flex-start;gap:24px;">
+    <div style="min-width:80px;height:80px;border-radius:16px;background:#4C6EF5;color:#FFF;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P3</div>
+    <div style="flex:1;">
+      <div style="font-size:40px;font-weight:700;color:#212529;margin-bottom:12px;">物理模型与本构</div>
+      <div style="font-size:38px;line-height:1.7;color:#495057;background:#F8F9FA;padding:28px;border-radius:14px;">
+        回答：<span style="font-weight:700;color:#4C6EF5;">模型如何回应外力？</span><br>
+        关联 Skill 最密集（BPM/GBM/流体）<br>
+        ⚠️ 复杂度必须匹配数据承载力
+      </div>
+    </div>
+  </div>
+
+  <!-- P4 -->
+  <div style="margin-top:32px;display:flex;align-items:flex-start;gap:24px;">
+    <div style="min-width:80px;height:80px;border-radius:16px;background:#4C6EF5;color:#FFF;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P4</div>
+    <div style="flex:1;">
+      <div style="font-size:40px;font-weight:700;color:#212529;margin-bottom:12px;">参数标定 — 让模型认识世界</div>
+      <div style="font-size:38px;line-height:1.7;color:#495057;background:#F8F9FA;padding:28px;border-radius:14px;">
+        本构配置 + 试验数据 → 标定参数<br>
+        💡 不是调参，而是<span style="background:#DBE4FF;padding:4px 8px;font-weight:600;">诚实验证</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;font-size:40px;color:#4C6EF5;font-weight:700;">↓ 下一步：P5 加载与运行</div>
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记 · 4/6</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARD 4: CONTENT-4 - P5+P6+P7+决策表 (精简至≤140字) -->
+<!-- ============================================================ -->
+<div data-card="content-4" style="width:1242px;height:1660px;box-sizing:border-box;padding:110px 100px;background-color:#FFFFFF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;">
+  <div style="display:flex;align-items:center;gap:32px;">
+    <span style="width:110px;height:110px;border-radius:50%;background:#4C6EF5;color:#FFFFFF;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;">4</span>
+    <span style="font-size:52px;font-weight:800;color:#212529;">P5-P7：运行·处理·评审</span>
+  </div>
+
+  <!-- P5 P6 P7 精简版 -->
+  <div style="margin-top:40px;background:#EDF2FF;border-radius:18px;padding:36px;font-size:38px;line-height:1.75;color:#212529;">
+    <div style="margin-bottom:20px;"><strong style="color:#4C6EF5;">P5 加载运行</strong> — 时间最不可控 ⚠️别丢数据</div>
+    <div style="margin-bottom:20px;"><strong style="color:#4C6EF5;">P6 后处理</strong> — 从数据中辨认意义 📊服务论证</div>
+    <div style="margin-bottom:20px;"><strong style="color:#4C6EF5;">P7 评审迭代</strong> — 工程良心的最后叩问</div>
+    <div style="background:#DBE4FF;padding:8px 12px;border-radius:8px;font-weight:600;color:#4C6EF5;">返工不是失败，是良心的正常呼吸</div>
+  </div>
+
+  <!-- 决策表 & 契约 精简版 -->
+  <div style="margin-top:32px;background:#F8F9FA;border-radius:16px;padding:32px;font-size:36px;line-height:1.75;color:#495057;">
+    <div style="font-weight:700;color:#212529;margin-bottom:16px;">📋 决策表 · 数据契约</div>
+    • 决策表：关键词→Skill优先级路由<br>
+    • precondition：上游给齐才能启动<br>
+    • handoff：结束时明明白白交出
+  </div>
+
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记 · 5/6</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARD 5: END - 结尾页 -->
+<!-- ============================================================ -->
+<div data-card="end" style="width:1242px;height:1660px;box-sizing:border-box;padding:110px 100px;background-color:#EDF2FF;background-image:linear-gradient(#E9ECEF 1px,transparent 1px),linear-gradient(90deg,#E9ECEF 1px,transparent 1px);background-size:60px 60px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;position:relative;display:flex;flex-direction:column;">
+  <div style="font-size:48px;font-weight:800;color:#4C6EF5;margin-bottom:40px;">✅ 今日重点回顾</div>
+
+  <div style="background:#FFFFFF;border-radius:20px;padding:40px;flex:1;">
+    <div style="font-size:40px;line-height:1.85;color:#212529;">
+      <div style="margin-bottom:22px;"><span style="display:inline-block;width:48px;height:48px;border-radius:50%;background:#4C6EF5;color:#FFF;text-align:center;line-height:48px;font-size:28px;font-weight:700;margin-right:20px;">1</span>pfc-workflow 是调度骨架</div>
+      <div style="margin-bottom:22px;"><span style="display:inline-block;width:48px;height:48px;border-radius:50%;background:#4C6EF5;color:#FFF;text-align:center;line-height:48px;font-size:28px;font-weight:700;margin-right:20px;">2</span>P1-P7 七阶段有明确节律</div>
+      <div style="margin-bottom:22px;"><span style="display:inline-block;width:48px;height:48px;border-radius:50%;background:#4C6EF5;color:#FFF;text-align:center;line-height:48px;font-size:28px;font-weight:700;margin-right:20px;">3</span>决策表是 LLM 与方法论的契约</div>
+      <div><span style="display:inline-block;width:48px;height:48px;border-radius:50%;background:#4C6EF5;color:#FFF;text-align:center;line-height:48px;font-size:28px;font-weight:700;margin-right:20px;">4</span><span style="background:#DBE4FF;padding:4px 10px;font-weight:700;color:#4C6EF5;">节律是方法论成熟的标志</span></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:36px;">
+    <div style="font-size:42px;font-weight:800;color:#212529;">关注我 🔬 解锁岩石力学干货</div>
+    <div style="margin-top:24px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <span style="background:#4C6EF5;color:#FFF;font-size:30px;font-weight:600;padding:10px 24px;border-radius:10px;">#离散元模拟</span>
+      <span style="background:#4C6EF5;color:#FFF;font-size:30px;font-weight:600;padding:10px 24px;border-radius:10px;">#PFC</span>
+      <span style="background:#4C6EF5;color:#FFF;font-size:30px;font-weight:600;padding:10px 24px;border-radius:10px;">#岩石力学</span>
+      <span style="background:#4C6EF5;color:#FFF;font-size:30px;font-weight:600;padding:10px 24px;border-radius:10px;">#科研方法论</span>
+    </div>
+  </div>
+
+  <div style="position:absolute;right:100px;bottom:96px;font-size:32px;color:#868E96;">🔬 岩石力学笔记 · 6/6</div>
+</div>
+
+</body>
+</html>
