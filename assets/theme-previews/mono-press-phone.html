@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<style>*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#F0F0F0;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.phone{
+  width:880px;
+  height:1820px;
+  background:#222;
+  border-radius:64px;
+  padding:12px 12px 24px 12px;
+  box-shadow:
+    0 0 0 3px #333,
+    0 20px 60px rgba(0,0,0,0.3),
+    inset 0 0 4px rgba(255,255,255,0.05);
+  position:relative;
+}
+.phone::before{
+  content:'';
+  position:absolute;
+  top:18px;left:50%;
+  transform:translateX(-50%);
+  width:160px;height:28px;
+  background:#111;
+  border-radius:20px;
+  z-index:10;
+}
+.screen{
+  width:800px;
+  height:1660px;
+  border-radius:56px;
+  overflow:hidden;
+  position:relative;
+}
+/* 状态栏 */
+.status-bar{
+  position:absolute;top:0;left:0;right:0;height:52px;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 28px;z-index:5;
+  font-family:-apple-system,sans-serif;font-size:26px;font-weight:600;color:#fff;
+  background:linear-gradient(180deg,rgba(0,0,0,0.12),transparent);
+}
+.status-bar .time{letter-spacing:1px;}
+.status-bar .icons{display:flex;gap:8px;align-items:center;}
+.status-bar .icons span{font-size:22px;}
+/* 底部指示条 */
+.home-indicator{
+  position:absolute;bottom:8px;left:50%;
+  transform:translateX(-50%);
+  width:140px;height:5px;
+  background:rgba(255,255,255,0.6);
+  border-radius:3px;
+  z-index:5;
+}
+</style></head>
+<body>
+<div class="phone">
+  <div class="status-bar">
+    <span class="time">02:07</span>
+    <span class="icons">
+      <span>📶</span><span>📡</span><span>🔋</span>
+    </span>
+  </div>
+  <div class="screen"><div style="width:800px;height:1660px;box-sizing:border-box;padding:100px 76px;background:#1A1A1A;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;display:flex;flex-direction:column;justify-content:center;">
+  <div style="font-size:30px;color:#868E96;letter-spacing:10px;">VOL.01 · 观点</div>
+  <div style="font-family:'Songti SC','SimSun',serif;font-size:128px;line-height:1.2;font-weight:900;color:#F8F9FA;margin-top:48px;">思考<br>停止内耗</div>
+  <div style="width:180px;height:6px;background:#F8F9FA;margin-top:56px;"></div>
+  <div style="font-size:42px;color:#ADB5BD;margin-top:48px;">大多数焦虑来自想太多做太少</div>
+  <div style="position:absolute;right:76px;bottom:80px;font-size:28px;color:#868E96;">你的昵称</div>
+</div></div>
+  <div class="home-indicator"></div>
+</div>
+</body></html>
