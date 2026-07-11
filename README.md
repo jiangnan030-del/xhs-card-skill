@@ -20,6 +20,12 @@
 
 一个给 AI Agent（Claude Code / Codex / Cursor 等）用的小红书图文卡片排版 Skill。你写完 Markdown，它按你选的主题，生成 **3:4 比例的精美卡组 HTML**，再通过 Playwright 渲染成 PNG——自动切页、控制字数预算、落实安全区、打人设角标，并用三关校验脚本确定性兜住小红书平台的各种限制。
 
+## 👀 效果预览
+
+<p align="center">
+<img src="github-cover.png" width="600" alt="xhs-card-skill - 小红书图文卡片排版">
+</p>
+
 ## ✨ 核心特性
 
 - **6 套精选主题**：番茄手帐（默认）· 黑白报刊 · 蓝图笔记 · 便利贴拼贴 · 薄荷实验室 · 霓虹磁带 —— 每套都是自成体系的组件库（设计变量 + 封面/内容页/结尾页三段式 + 配方表）。
@@ -30,12 +36,6 @@
 - **样式全内联**：禁 `class=`、禁外部字体、禁 `position:fixed`，所有样式内联。
 - **三关质量校验**：`card_lint.py`（组件库源头）+ `validate_card.py`（逐卡规则）+ `render_check.py`（像素级溢出检测），构成可复现的「改→验→修」闭环。
 - **一键导出 PNG**：Playwright 无头渲染，输出逐卡 PNG 直接发布。
-
-## 👀 效果预览
-
-<p align="center">
-<img src="github-cover.png" width="600" alt="xhs-card-skill GitHub Social Preview">
-</p>
 
 ## ✅ 适合 / ❌ 不适合
 
