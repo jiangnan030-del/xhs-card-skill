@@ -10,7 +10,7 @@
 
 ```bash
 # 手动安装到 Claude Code skills 目录（Codex / Cursor 同理）
-git clone <你的仓库地址> ~/.claude/skills/xhs-card
+git clone https://github.com/jiangnan030-del/xhs-card-skill.git ~/.claude/skills/xhs-card
 ```
 
 装好后直接对 Agent 说：
