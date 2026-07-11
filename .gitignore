@@ -1,2 +1,8 @@
 out/
 .git-credentials
+node_modules/
+*.mjs
+
+# 允许封面图（GitHub Social Preview）
+!github-cover.png
+!github-cover.html
